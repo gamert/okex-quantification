@@ -1,8 +1,8 @@
-websockets==8.1
+pyquery==1.4.1
+pymssql==2.1.4
 APScheduler==3.6.3
 schedule==0.6.0
-pymssql==2.1.4
-pyquery==1.4.1
+websockets==8.1
 requests==2.24.0
 python_dateutil==2.8.1
 SocksiPy_branch==1.01

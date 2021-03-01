@@ -2,7 +2,6 @@ __pycache__/
 *.py[cod]
 .idea
 .python-version
-accounts.json
 .vscode
 log1.txt
 mylog-ws.json
