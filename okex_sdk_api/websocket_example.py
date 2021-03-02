@@ -561,7 +561,8 @@ url = 'wss://real.okex.com:8443/ws/v3'
 
 # ws公共指数频道
 # 指数行情
-channels = ["index/ticker:BTC-USD"]
+channels = ["index/ticker:OKB-USDT"]
+channels = ["spot/candle60s:OKB-USDT","swap/trade:OKB-USDT-SWAP"]
 # 指数K线
 # channels = ["index/candle60s:BTC-USD"]
 
