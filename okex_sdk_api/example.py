@@ -1,10 +1,10 @@
-import okex.account_api as account
-import okex.futures_api as future
-import okex.lever_api as lever
-import okex.spot_api as spot
-import okex.swap_api as swap
-import okex.index_api as index
-import okex.option_api as option
+import okex_sdk_api.okex.account_api as account
+import okex_sdk_api.okex.futures_api as future
+import okex_sdk_api.okex.lever_api as lever
+import okex_sdk_api.okex.spot_api as spot
+import okex_sdk_api.okex.swap_api as swap
+import okex_sdk_api.okex.index_api as index
+import okex_sdk_api.okex.option_api as option
 import json
 import logging
 import datetime
@@ -404,7 +404,7 @@ if __name__ == '__main__':
 # 指数API
     indexAPI = index.IndexAPI(api_key, secret_key, passphrase, False)
     # 公共-获取指数成分 （20次/2s）
-    # result = indexAPI.get_index_constituents('BTC-USD')
+    result = indexAPI.get_index_constituents('BTC-USD')
 
     print(time + json.dumps(result))
     logging.info("result:" + json.dumps(result))

@@ -193,6 +193,9 @@ class OKEXWebsocket(object):
 
         msg = json.loads(decompress.decompress(data))
         print(msg)
+        # 原始数据:
+        # {'table': 'swap/depth5', 'data': [{'asks': [['49004.7', '498', '0', '9'], ['49005.2', '89', '0', '1'], ['49009', '24', '0', '1'], ['49009.5', '24', '0', '1'], ['49010.4', '236', '0', '1']], 'bids': [['49004.6', '1344', '0', '8'], ['49000.2', '24', '0', '1'], ['49000', '24', '0', '1'], ['48998.4', '40', '0', '1'], ['48998.3', '70', '0', '1']], 'instrument_id': 'BTC-USD-SWAP', 'timestamp': '2021-03-02T13:34:39.590Z'}]}
+
         if 'table' in msg and msg['table'] == 'swap/depth5':
             data = msg['data']
             for item in data:
@@ -243,5 +246,7 @@ class OKEXWebsocket(object):
 
 
 if __name__ == '__main__':
-    okex_ws = OKEXWebsocket(host="wss://real.okex.com:8443/ws/v3", ping_interval=20)
+    okex_ws = OKEXWebsocket(host="wss://104.19.212.87:8443/ws/v3", ping_interval=20)
     okex_ws.start()
+
+
